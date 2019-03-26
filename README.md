@@ -251,23 +251,23 @@ The handleClick function is an event handler that fires when a button connected 
 
 * **When you enter input that isn't valid, you see an error that is red. Why is the error in red? Why is the response for valid inputs blue?**
 
-  
+When an invalid input is encountered, the CSS class "error" is invoked, which makes the text red. If the input is valid, "good" is called, which will make the text blue. 
 
 * **What is this line `var regex = /^[a-zA-Z]+$/;` helping with? And if you googled something to figure that out, what did you google, and what, briefly, did you learn? (If you didn't need to google, you can leave that out, but explain briefly what that line is helping the program do, anyway.)**
 
-  
+This line checks for the occurance of a certain pattern or series of characters. It is saving the desired pattern/regular expression as a variable to refer to later on in the program.
 
 * **What's different about the syntax of conditional statements in JavaScript, compared to Python?**
 
-  
+ Whereas in Python a user can use verbal operators such as "is," "is not," or "or," JavaScript relies on symbols to show relationships and equality.
 
 * **What do you think the `10000` refers to in the code `.fadeOut(10000)`?**
 
-  
+The time in milliseconds it takes for the text to fade out.
 
 * **What do you think is going on with the following code at the beginning of the program? Note that the most important thing to do for answering this question is to be thoughtful and clear, not to be absolutely correct:**
 
-  
+
 
 ```js
 
