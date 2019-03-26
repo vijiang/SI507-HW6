@@ -1,4 +1,4 @@
-
+﻿
 # JavaScript assignment
 
  
@@ -145,7 +145,9 @@ Below are a bunch of questions and indications of things to do. For each indicat
 This is what an example answer should look like. If you want to include some code, which you probably don't have to do, you can, like this:
 
 ```js
+
 Some JavaScript code
+
 ```
 
 * **What does a code comment look like in JavaScript? What character/s do you have to put before a comment?**
@@ -153,8 +155,10 @@ Some JavaScript code
 A line of JS can be commented out with two forward slashes:
 
 ```js
+
 // this line is commented out
 console.log("this line is not commented out")
+
 ```  
 
 * **Explain what needs to happen to get a JavaScript program to "run", given the JavaScript you've seen in this assignment.**
@@ -162,15 +166,19 @@ console.log("this line is not commented out")
 In order for a JS program to run, there needs to be a <script></script> tag present in the HTML code. This will apply Javascript to the page. 
 
 ```js
+
 <script type="text/javascript">
 // write some js code directly on the page
 </script>
+
 ```  
 
 If you write JS in a separate file, you can link it in your HTML as you would a CSS stylesheet. It will still be able to access and select elements from the DOM in order to effect them.
 
 ```js
+
 <script src="scripts/main.js"></script>
+
 ```
 
  (the code in the text box above was taken from [MDN](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics))
@@ -182,15 +190,19 @@ Printing to the console will show information in the browser's console log that 
 Alerts can also be used to debug; they are in the form of browser pop-up windows, but are a bit annoying and interruptive, and are visible both to the website viewer and the programmer. 
 
 ```js
+
 alert("hello");
 console.log("hello in console");
+
 ```
 
 * **What code would have to comment out to get rid of the pop-up box when you load the page? (Related to the last question.) Do that in the code file, and then, add code so that a text box will appear that contains the current date and time! *HINT:* Look through the rest of the code first...**
 
  ```js
+
 // alert("hello");
 alert(new Date())
+
 ``` 
 
 * **How can you put your own name at the top where it currently says "A name"? Explain very briefly how to do so, and replace `A name` in the web page with your own name.**
@@ -203,48 +215,66 @@ document.querySelector('h1').innerHTML  =  "vivian";
 
 * **What does the word `document` represent in this code? Explain briefly.**
 
-Document represents the web page loaded in the browser ([source](https://developer.mozilla.org/en-US/docs/Web/API/Document)). In this code, we are accessing the DOM through the document objects and selecting certain elements and items from it in order to modify them.
+ 
 
-* **What is happening in line 12 (`
-document.querySelector('#items').innerHTML = document.getElementsByTagName('li').length`)? Explain, briefly (<= 2 sentences).**
+* **What is happening in line 12 (
 
-Counting the number of elements in the page tagged with "li" and printing that number out where the #items ID is. 
+`document.querySelector('#items').innerHTML = document.getElementsByTagName('li').length`
+
+)? Explain, briefly (<= 2 sentences).**
+
+  
 
 * **What color would the background of this page be <u>if there were no JavaScript in this page</u>?**
 
-Browser default colour; most likely white (#FFFFFF)
+  
 
 * **Why are there a couple of gray boxes on the screen with a different colored border? How could you edit this code to make them a different color? Explain briefly. Then edit the code to make those boxes some shade of blue, of your choosing.**
 
-The grey boxes are rendered from the p selector in the ``<style>`` tag.  You can edit the code to make them a different colour by changing the *background-color* and *border* hex codes in the declaration block.
+  
 
 * **Edit the code so that, if you highlight `McGill University` and copy it, you see the text `O Canada` near the bottom of the page. Briefly explain why you made the edits that you did -- how did you know/figure out what to do?**
 
-I based my edits off University of Michigan's copyFunction(), but changed "Go blue!" to "0 Canada." The div with #cheer as the ID is near the bottom of the page, so I used pointed the function to that location as well.
+  
 
 * **In the original code, when you click the button that says `Wow`, you see a text box! Wow. Explain briefly in your own words why the following code causes that to happen:**
 
+  
+
 ```js
+
 function  handleClick(){
+
 alert("hello");
+
 }
+
 ```
 
 **and**
 
+  
 
 ```js
+
 <button  onclick=handleClick()  id="wow-button">Wow</button>
+
 ```
+
   
-The handleClick function is an event handler that fires when a button connected to it is clicked. 
+  
+  
 
 * **Knowing what you learned from the previous question, add code/markup to the `jsPracticeLab.html` file *so that* there is a button with the text `Spring Equinox 2019` on it somewhere on the page, and when that button is clicked, a text box containing the text `March 20, 2019` appears. (There's no function -- that I am aware of -- to automatically get this info, you've got to type it yourself.)**
 
+  
+  
+  
 
 ### The next few questions address the `jquerylib_submit_example.html` file.
 
- 
+  
+
 * **Check out the file `jquerylib_submit_example.html`. This is an example of code that uses a package called `jQuery` (and this will need you to have an internet connection to run it properly, although the other file does not). Check out resources above for more on jQuery!**
 
   
@@ -277,6 +307,8 @@ $("form").submit(function(event){
 
 ```
 
+  
+  
 
 * **Add some code to the `jquerylib_submit_example.html` file so that, if the input is valid and is specifically the text `hello`, rather than the visible output being `Nice!` in blue, the visible output should be `Hello to you too!`, also in blue, just like `Nice!` is.**
 
