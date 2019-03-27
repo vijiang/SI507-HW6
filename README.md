@@ -203,7 +203,7 @@ document.querySelector('h1').innerHTML  =  "vivian";
 
 * **What does the word `document` represent in this code? Explain briefly.**
 
-Document represents the web page loaded in the browser ([source](https://developer.mozilla.org/en-US/docs/Web/API/Document)). In this code, we are accessing the DOM through the document objects and selecting certain elements and items from it in order to modify them.
+Document represents the web page loaded in the browser ([source](https://developer.mozilla.org/en-US/docs/Web/API/Document)). In this code, we are accessing the DOM through the document object and selecting certain elements and items from it in order to modify them.
 
 * **What is happening in line 12 (`
 document.querySelector('#items').innerHTML = document.getElementsByTagName('li').length`)? Explain, briefly (<= 2 sentences).**
@@ -220,7 +220,7 @@ The grey boxes are rendered from the p selector in the ``<style>`` tag.  You can
 
 * **Edit the code so that, if you highlight `McGill University` and copy it, you see the text `O Canada` near the bottom of the page. Briefly explain why you made the edits that you did -- how did you know/figure out what to do?**
 
-I based my edits off University of Michigan's copyFunction(), but changed "Go blue!" to "0 Canada." The div with #cheer as the ID is near the bottom of the page, so I used pointed the function to that location as well.
+I based my edits off University of Michigan's copyFunction(), but changed "Go blue!" to "O Canada." The div with #cheer as the ID is near the bottom of the page, so I pointed the function to that location as well.
 
 * **In the original code, when you click the button that says `Wow`, you see a text box! Wow. Explain briefly in your own words why the following code causes that to happen:**
 
@@ -251,7 +251,7 @@ The handleClick function is an event handler that fires when a button connected 
 
 * **When you enter input that isn't valid, you see an error that is red. Why is the error in red? Why is the response for valid inputs blue?**
 
-When an invalid input is encountered, the CSS class "error" is invoked, which makes the text red. If the input is valid, "good" is called, which will make the text blue. 
+When an invalid input is encountered, the CSS class "error" is applied to the ``<p>`` element, which makes the text red. If the input is valid, "good" is applied, which will make the text blue. 
 
 * **What is this line `var regex = /^[a-zA-Z]+$/;` helping with? And if you googled something to figure that out, what did you google, and what, briefly, did you learn? (If you didn't need to google, you can leave that out, but explain briefly what that line is helping the program do, anyway.)**
 
@@ -259,7 +259,7 @@ This line checks for the occurance of a certain pattern or series of characters.
 
 * **What's different about the syntax of conditional statements in JavaScript, compared to Python?**
 
- Whereas in Python a user can use verbal operators such as "is," "is not," or "or," JavaScript relies on symbols to show relationships and equality.
+ Whereas in Python a user can use verbal operators such as "is," "is not," or "or," JavaScript relies on symbols to show relationships and equality. Javascript also uses curly braces to surround conditional statements; additionally, you cannot abbreviate "else if" to "elif."
 
 * **What do you think the `10000` refers to in the code `.fadeOut(10000)`?**
 
@@ -277,6 +277,9 @@ $("form").submit(function(event){
 
 ```
 
+According to the jQuery documentation, the code inside .ready() will run only if the DOM is ready for JS code to execute, as detected by jQuery. Because the entire HTML file is read from top to bottom, the JS code that is placed at the top of our document will only be able to reference the DOM nodes once the browser indicates that the page is ready. If the JS code was not inside .ready(), it would have to be placed at the bottom of the page in order for it to have access to the nodes it will manipulate.
+
+The second line wil run the code inside .submit() when a form is submitted.
 
 * **Add some code to the `jquerylib_submit_example.html` file so that, if the input is valid and is specifically the text `hello`, rather than the visible output being `Nice!` in blue, the visible output should be `Hello to you too!`, also in blue, just like `Nice!` is.**
 
